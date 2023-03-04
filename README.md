@@ -1,5 +1,34 @@
 # API-Auth-Authorization-Library-L0k1
 This library provides secure authentication and authorization mechanisms for APIs based on the OWASP Top 10 API 2023. The library is written in Python and uses the Flask framework for API development.
+
+To use the script through the command-line interface (CLI), you can follow these steps:
+
+    Open a terminal window and navigate to the directory where your Flask application is located.
+
+    Make sure that the required packages are installed by running the following command:
+
+pip install Flask Flask-Limiter bcrypt
+
+    Start the Flask application by running the following command:
+
+bash
+
+export FLASK_APP=myapp.py  # replace myapp.py with the name of your Flask application file
+flask run
+
+    Once the Flask application is running, you can test the authentication and authorization functionality of the API Authentication and Authorization Library using a tool like curl. For example, to access a private endpoint that requires admin permission, you can run the following command:
+
+bash
+
+curl -H "Authorization: Bearer your_auth_token" http://localhost:5000/private_endpoint
+
+Make sure to replace your_auth_token with a valid authentication token.
+
+    You can also test the rate limiting functionality by sending too many requests within a short period of time. The exact behavior will depend on the rate limiting parameters you have set.
+
+
+
+
     Install the required packages: The library requires the Flask, bcrypt, and Flask-Limiter packages. You can install these packages using pip by running the following command: pip install Flask Flask-Limiter bcrypt.
 
     Import the library: In your Flask application, import the library by running from api_auth import ApiAuth.
